@@ -6,16 +6,16 @@ export default function WhyChooseUs() {
     <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-3">Why Choose SuperMart</h2>
+          <h2 className="text-3xl font-bold mb-3">Why Choose AlbMarket</h2>
           <p className="text-gray-600 max-w-xl mx-auto">
-            We're committed to providing the best shopping experience with quality products and exceptional service
+            We&apos;re committed to providing the best shopping experience with quality products and exceptional service
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
             <div className="relative rounded-2xl overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-tr from-blue-600/20 to-red-600/20"></div>
+              <div className="absolute inset-0 bg-gradient-to-tr from-orange-500/20 to-green-600/20"></div>
               <Image
                 src="/placeholder.svg?height=600&width=800&text=Quality+Products"
                 alt="Quality products"
@@ -29,7 +29,7 @@ export default function WhyChooseUs() {
           <div className="space-y-8">
             {[
               {
-                icon: <Award className="h-6 w-6 text-blue-600" />,
+                icon: <Award className="h-6 w-6 text-orange-500" />,
                 title: "Premium Quality",
                 description:
                   "We source the highest quality products from trusted suppliers and farmers to ensure you get the best.",
@@ -41,19 +41,19 @@ export default function WhyChooseUs() {
                   "Our produce is organic, sustainably sourced, and delivered fresh to maintain nutritional value.",
               },
               {
-                icon: <ShieldCheck className="h-6 w-6 text-red-600" />,
+                icon: <ShieldCheck className="h-6 w-6 text-orange-500" />,
                 title: "Safety Guaranteed",
                 description:
                   "We follow strict safety protocols for handling and delivering all our products to ensure your well-being.",
               },
               {
-                icon: <Truck className="h-6 w-6 text-purple-600" />,
+                icon: <Truck className="h-6 w-6 text-green-600" />,
                 title: "Fast Delivery",
                 description:
                   "Get your groceries delivered to your doorstep in as little as 1 hour with our express delivery service.",
               },
               {
-                icon: <Clock className="h-6 w-6 text-yellow-600" />,
+                icon: <Clock className="h-6 w-6 text-orange-500" />,
                 title: "Convenient Shopping",
                 description:
                   "Shop anytime, anywhere with our user-friendly website and mobile app for a seamless experience.",
@@ -94,7 +94,7 @@ export default function WhyChooseUs() {
               key={index}
               className="text-center p-8 rounded-2xl bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200"
             >
-              <div className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent mb-2">
+              <div className="text-4xl font-bold bg-gradient-to-r from-orange-500 to-green-600 bg-clip-text text-transparent mb-2">
                 {stat.number}
               </div>
               <h3 className="text-xl font-bold mb-2">{stat.title}</h3>

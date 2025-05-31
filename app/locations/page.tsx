@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import { MapPin, Phone, Clock, ArrowRight, Search } from "lucide-react"
+import { MapPin, Phone, Clock, ArrowRight, Search, ChevronRight } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -18,12 +18,12 @@ export default function LocationsPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-r from-blue-600 to-red-600 overflow-hidden">
+        <section className="relative py-20 bg-gradient-to-r from-orange-500 to-green-600 overflow-hidden">
           <div className="absolute inset-0 bg-[url('/placeholder.svg?height=900&width=1600')] opacity-20 mix-blend-overlay bg-fixed"></div>
           <div className="container mx-auto px-4 relative">
             <div className="max-w-3xl mx-auto text-center text-white">
               <h1 className="text-4xl md:text-6xl font-bold mb-6">Our Locations</h1>
-              <p className="text-xl text-white/90 mb-8">Find a SuperMart store near you with our store locator</p>
+              <p className="text-xl text-white/90 mb-8">Find a Xhangolli store near you with our store locator</p>
 
               <div className="relative max-w-xl mx-auto">
                 <Input
@@ -32,7 +32,7 @@ export default function LocationsPage() {
                   className="pl-12 pr-4 py-6 rounded-full border-2 border-white/30 bg-white/10 placeholder:text-white/60 text-white focus:border-white focus:ring-white"
                 />
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-white/70" />
-                <Button className="absolute right-2 top-1/2 transform -translate-y-1/2 rounded-full bg-white text-blue-600 hover:bg-gray-100">
+                <Button className="absolute right-2 top-1/2 transform -translate-y-1/2 rounded-full bg-white text-orange-500 hover:bg-gray-100">
                   Find Stores
                 </Button>
               </div>
@@ -48,25 +48,25 @@ export default function LocationsPage() {
                 <TabsList className="bg-gray-100 p-1 rounded-full">
                   <TabsTrigger
                     value="all"
-                    className="rounded-full px-6 data-[state=active]:bg-blue-600 data-[state=active]:text-white"
+                    className="rounded-full px-6 data-[state=active]:bg-orange-500 data-[state=active]:text-white"
                   >
                     All Stores
                   </TabsTrigger>
                   <TabsTrigger
                     value="flagship"
-                    className="rounded-full px-6 data-[state=active]:bg-blue-600 data-[state=active]:text-white"
+                    className="rounded-full px-6 data-[state=active]:bg-orange-500 data-[state=active]:text-white"
                   >
                     Flagship
                   </TabsTrigger>
                   <TabsTrigger
                     value="superstore"
-                    className="rounded-full px-6 data-[state=active]:bg-blue-600 data-[state=active]:text-white"
+                    className="rounded-full px-6 data-[state=active]:bg-orange-500 data-[state=active]:text-white"
                   >
                     Superstore
                   </TabsTrigger>
                   <TabsTrigger
                     value="express"
-                    className="rounded-full px-6 data-[state=active]:bg-blue-600 data-[state=active]:text-white"
+                    className="rounded-full px-6 data-[state=active]:bg-orange-500 data-[state=active]:text-white"
                   >
                     Express
                   </TabsTrigger>
@@ -130,6 +130,12 @@ export default function LocationsPage() {
                 height={1200}
                 className="w-full h-full object-cover"
               />
+            </div>
+            <div className="mt-4 flex justify-center">
+              <Button className="bg-orange-500 hover:bg-orange-600 rounded-full px-8">
+                View All Locations
+                <ChevronRight className="ml-2 h-4 w-4" />
+              </Button>
             </div>
           </div>
         </section>
@@ -277,15 +283,15 @@ export default function LocationsPage() {
         </section>
 
         {/* Contact CTA */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-red-600 relative overflow-hidden">
+        <section className="py-16 bg-gradient-to-r from-orange-500 to-green-600 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('/placeholder.svg?height=500&width=1920')] opacity-10 mix-blend-overlay"></div>
           <div className="container mx-auto px-4 relative">
             <div className="max-w-3xl mx-auto text-center text-white">
               <h2 className="text-3xl font-bold mb-6">Need Help Finding a Store?</h2>
               <p className="text-xl mb-8">
-                Our customer service team is ready to assist you in finding the nearest SuperMart location.
+                Our customer service team is ready to assist you in finding the nearest Xhangolli location.
               </p>
-              <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 rounded-full">
+              <Button size="lg" className="bg-white text-orange-500 hover:bg-gray-100 rounded-full">
                 Contact Customer Service
               </Button>
             </div>
@@ -300,7 +306,19 @@ export default function LocationsPage() {
 }
 
 // Store Card Component
-function StoreCard({ location }) {
+// Define the type for the location prop
+interface Location {
+  id: number;
+  name: string;
+  address: string;
+  phone: string;
+  hours: string;
+  type: string;
+  image?: string;
+  features?: string[];
+}
+
+function StoreCard({ location }: { location: Location }) {
   return (
     <Card className="overflow-hidden hover:shadow-lg transition-shadow">
       <div className="relative h-48">
@@ -314,14 +332,14 @@ function StoreCard({ location }) {
         <div className="absolute top-3 left-3">
           <Badge
             className={`
-            ${
-              location.type === "Flagship Store"
-                ? "bg-blue-600"
-                : location.type === "Superstore"
-                  ? "bg-purple-600"
-                  : "bg-green-600"
-            }
-          `}
+  ${
+    location.type === "Flagship Store"
+      ? "bg-orange-500"
+      : location.type === "Superstore"
+        ? "bg-green-600"
+        : "bg-orange-400"
+  }
+`}
           >
             {location.type}
           </Badge>
@@ -345,11 +363,11 @@ function StoreCard({ location }) {
         </div>
         <div className="flex justify-between items-center">
           <Link href={`/locations/${location.id}`}>
-            <Button variant="outline" size="sm" className="text-blue-600 border-blue-600 hover:bg-blue-50">
+            <Button variant="outline" size="sm" className="text-orange-500 border-orange-500 hover:bg-orange-50">
               Store Details
             </Button>
           </Link>
-          <Link href="#" className="text-sm font-medium text-blue-600 hover:underline flex items-center">
+          <Link href="#" className="text-sm font-medium text-green-600 hover:underline flex items-center">
             Get Directions
             <ArrowRight className="ml-1 h-3 w-3" />
           </Link>
@@ -363,7 +381,7 @@ function StoreCard({ location }) {
 const storeLocations = [
   {
     id: 1,
-    name: "SuperMart Downtown",
+    name: "Xhangolli Downtown",
     address: "123 Main Street, Downtown, City 10001",
     phone: "(123) 456-7890",
     hours: "8:00 AM - 10:00 PM",
@@ -373,7 +391,7 @@ const storeLocations = [
   },
   {
     id: 2,
-    name: "SuperMart Westside",
+    name: "Xhangolli Westside",
     address: "456 West Avenue, Westside, City 10002",
     phone: "(123) 456-7891",
     hours: "7:00 AM - 11:00 PM",
@@ -383,7 +401,7 @@ const storeLocations = [
   },
   {
     id: 3,
-    name: "SuperMart Eastside",
+    name: "Xhangolli Eastside",
     address: "789 East Boulevard, Eastside, City 10003",
     phone: "(123) 456-7892",
     hours: "8:00 AM - 9:00 PM",
@@ -393,7 +411,7 @@ const storeLocations = [
   },
   {
     id: 4,
-    name: "SuperMart Northside",
+    name: "Xhangolli Northside",
     address: "101 North Road, Northside, City 10004",
     phone: "(123) 456-7893",
     hours: "7:00 AM - 10:00 PM",
@@ -403,7 +421,7 @@ const storeLocations = [
   },
   {
     id: 5,
-    name: "SuperMart Southside",
+    name: "Xhangolli Southside",
     address: "202 South Lane, Southside, City 10005",
     phone: "(123) 456-7894",
     hours: "6:00 AM - 12:00 AM",
@@ -413,7 +431,7 @@ const storeLocations = [
   },
   {
     id: 6,
-    name: "SuperMart Central",
+    name: "Xhangolli Central",
     address: "303 Central Plaza, Midtown, City 10006",
     phone: "(123) 456-7895",
     hours: "7:00 AM - 11:00 PM",

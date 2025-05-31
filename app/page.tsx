@@ -21,7 +21,7 @@ export default function Home() {
         {/* Hero Section - Completely Redesigned */}
         <section className="relative bg-white overflow-hidden">
           {/* Background gradient */}
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-white to-red-50"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-green-50"></div>
 
           <div className="container mx-auto px-4 relative">
             <div className="grid md:grid-cols-2 gap-8 items-center py-16 md:py-24">
@@ -35,7 +35,7 @@ export default function Home() {
 
                 <h1 className="text-4xl md:text-6xl font-bold text-gray-900 tracking-tight mb-4">
                   Fresh Food, <br />
-                  <span className="text-blue-600">Delivered Daily</span>
+                  <span className="text-orange-500">Delivered Daily</span>
                 </h1>
 
                 <p className="text-lg text-gray-600 mb-8 max-w-md">
@@ -43,14 +43,14 @@ export default function Home() {
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white rounded-full px-8 py-6">
+                  <Button size="lg" className="bg-orange-500 hover:bg-orange-600 text-white rounded-full px-8 py-6">
                     Shop Now
                     <ArrowRight className="ml-2 h-5 w-5" />
                   </Button>
                   <Button
                     size="lg"
                     variant="outline"
-                    className="border-2 border-blue-600 text-blue-600 hover:bg-blue-50 rounded-full px-8 py-6"
+                    className="border-2 border-orange-500 text-orange-500 hover:bg-orange-50 rounded-full px-8 py-6"
                   >
                     View Offers
                   </Button>
@@ -65,13 +65,13 @@ export default function Home() {
                     <span className="text-sm font-medium text-gray-600">Free Delivery</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="h-10 w-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                    <div className="h-10 w-10 rounded-full bg-orange-100 flex items-center justify-center text-orange-500">
                       <ShieldCheck className="h-5 w-5" />
                     </div>
                     <span className="text-sm font-medium text-gray-600">Quality Guaranteed</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <div className="h-10 w-10 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                    <div className="h-10 w-10 rounded-full bg-green-100 flex items-center justify-center text-green-600">
                       <Heart className="h-5 w-5" />
                     </div>
                     <span className="text-sm font-medium text-gray-600">Customer Favorites</span>
@@ -132,8 +132,8 @@ export default function Home() {
                   </div>
 
                   {/* Decorative elements */}
-                  <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full bg-gradient-to-r from-blue-100 to-red-100 opacity-70 blur-3xl"></div>
-                  <div className="absolute -z-10 bottom-0 right-0 w-32 h-32 rounded-full bg-yellow-200 opacity-40 blur-2xl"></div>
+                  <div className="absolute -z-10 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] rounded-full bg-gradient-to-r from-orange-100 to-green-100 opacity-70 blur-3xl"></div>
+                  <div className="absolute -z-10 bottom-0 right-0 w-32 h-32 rounded-full bg-orange-200 opacity-40 blur-2xl"></div>
                   <div className="absolute -z-10 top-0 left-0 w-24 h-24 rounded-full bg-green-200 opacity-40 blur-2xl"></div>
                 </div>
               </div>
@@ -162,7 +162,7 @@ export default function Home() {
                 { icon: <Heart className="h-6 w-6" />, title: "100% Satisfaction", desc: "30-day return policy" },
               ].map((feature, index) => (
                 <div key={index} className="flex flex-col items-center text-center p-4">
-                  <div className="mb-4 h-16 w-16 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                  <div className="mb-4 h-16 w-16 rounded-full bg-orange-100 flex items-center justify-center text-orange-500">
                     {feature.icon}
                   </div>
                   <h3 className="font-bold text-lg mb-1">{feature.title}</h3>
@@ -189,7 +189,7 @@ export default function Home() {
                   href="#"
                   className="group flex flex-col items-center text-center p-6 rounded-xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-blue-200 transition-all duration-300"
                 >
-                  <div className="mb-4 h-20 w-20 rounded-full bg-gradient-to-br from-blue-50 to-red-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                  <div className="mb-4 h-20 w-20 rounded-full bg-gradient-to-br from-orange-50 to-green-50 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                     <Image
                       src={category.image || "/placeholder.svg?height=60&width=60"}
                       alt={category.name}
@@ -221,25 +221,25 @@ export default function Home() {
                 <TabsList className="bg-gray-100 p-1 rounded-full">
                   <TabsTrigger
                     value="all"
-                    className="rounded-full px-6 data-[state=active]:bg-blue-600 data-[state=active]:text-white"
+                    className="rounded-full px-6 data-[state=active]:bg-orange-500 data-[state=active]:text-white"
                   >
                     All Products
                   </TabsTrigger>
                   <TabsTrigger
                     value="trending"
-                    className="rounded-full px-6 data-[state=active]:bg-blue-600 data-[state=active]:text-white"
+                    className="rounded-full px-6 data-[state=active]:bg-orange-500 data-[state=active]:text-white"
                   >
                     Trending
                   </TabsTrigger>
                   <TabsTrigger
                     value="popular"
-                    className="rounded-full px-6 data-[state=active]:bg-blue-600 data-[state=active]:text-white"
+                    className="rounded-full px-6 data-[state=active]:bg-orange-500 data-[state=active]:text-white"
                   >
                     Popular
                   </TabsTrigger>
                   <TabsTrigger
                     value="new"
-                    className="rounded-full px-6 data-[state=active]:bg-blue-600 data-[state=active]:text-white"
+                    className="rounded-full px-6 data-[state=active]:bg-orange-500 data-[state=active]:text-white"
                   >
                     New Arrivals
                   </TabsTrigger>
@@ -287,7 +287,7 @@ export default function Home() {
 
             <div className="mt-10 text-center">
               <Link href="/products">
-                <Button className="bg-blue-600 hover:bg-blue-700 rounded-full px-8">
+                <Button className="bg-orange-500 hover:bg-orange-600 rounded-full px-8">
                   View All Products
                   <ChevronRight className="ml-2 h-4 w-4" />
                 </Button>
@@ -306,7 +306,7 @@ export default function Home() {
 
             <div className="grid md:grid-cols-2 gap-8">
               <div className="relative overflow-hidden rounded-2xl group">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-800 opacity-90 group-hover:opacity-95 transition-opacity"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-orange-600 to-orange-800 opacity-90 group-hover:opacity-95 transition-opacity"></div>
                 <Image
                   src="/placeholder.svg?height=400&width=800&text=Fresh+Produce"
                   alt="Fresh produce"
@@ -320,7 +320,7 @@ export default function Home() {
                   <p className="text-white/90 mb-6 max-w-[400px]">
                     Up to 30% off on organic fruits and vegetables. Farm fresh, delivered to your door.
                   </p>
-                  <Button className="w-fit bg-white text-blue-600 hover:bg-gray-100 rounded-full group">
+                  <Button className="w-fit bg-white text-orange-600 hover:bg-gray-100 rounded-full group">
                     Shop Now
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
@@ -328,7 +328,7 @@ export default function Home() {
               </div>
 
               <div className="relative overflow-hidden rounded-2xl group">
-                <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-800 opacity-90 group-hover:opacity-95 transition-opacity"></div>
+                <div className="absolute inset-0 bg-gradient-to-r from-green-600 to-green-800 opacity-90 group-hover:opacity-95 transition-opacity"></div>
                 <Image
                   src="/placeholder.svg?height=400&width=800&text=Meat+%26+Seafood"
                   alt="Meat and seafood"
@@ -342,7 +342,7 @@ export default function Home() {
                   <p className="text-white/90 mb-6 max-w-[400px]">
                     Buy one get one free on selected premium cuts. Sustainably sourced and fresh.
                   </p>
-                  <Button className="w-fit bg-white text-red-600 hover:bg-gray-100 rounded-full group">
+                  <Button className="w-fit bg-white text-green-600 hover:bg-gray-100 rounded-full group">
                     Shop Now
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
@@ -357,7 +357,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="mb-10 text-center">
               <h2 className="text-3xl font-bold mb-3">Our Locations</h2>
-              <p className="text-gray-600 max-w-xl mx-auto">Find a SuperMart store near you</p>
+              <p className="text-gray-600 max-w-xl mx-auto">Find a Xhangolli store near you</p>
             </div>
 
             <div className="relative rounded-2xl overflow-hidden h-[400px] mb-8">
@@ -374,7 +374,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-white mb-2">Find Your Nearest Store</h3>
                 <p className="text-white/90 mb-4 max-w-md">We have over 50 locations nationwide to serve you better.</p>
                 <Link href="/locations">
-                  <Button className="bg-white text-blue-600 hover:bg-gray-100 rounded-full group">
+                  <Button className="bg-white text-orange-500 hover:bg-gray-100 rounded-full group">
                     View All Locations
                     <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
@@ -428,9 +428,9 @@ export default function Home() {
         </section>
 
         {/* Newsletter */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-red-600 relative overflow-hidden">
+        <section className="py-16 bg-gradient-to-r from-orange-500 to-green-600 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('/placeholder.svg?height=500&width=1920')] opacity-10 mix-blend-overlay"></div>
-          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-300 to-red-300"></div>
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-300 to-green-300"></div>
           <div className="container mx-auto px-4 relative">
             <div className="max-w-3xl mx-auto bg-white/10 backdrop-blur-md rounded-2xl p-10 shadow-xl border border-white/20">
               <div className="text-center mb-8">
@@ -443,7 +443,7 @@ export default function Home() {
                   type="email"
                   className="flex-1 border-white/30 bg-white/20 placeholder:text-white/60 text-white rounded-full focus:border-white focus:ring-white"
                 />
-                <Button className="bg-white text-blue-600 hover:bg-gray-100 font-bold rounded-full">Subscribe</Button>
+                <Button className="bg-white text-orange-500 hover:bg-gray-100 font-bold rounded-full">Subscribe</Button>
               </div>
             </div>
           </div>
@@ -457,7 +457,7 @@ export default function Home() {
 }
 
 // Product Card Component
-interface Product {
+type Product = {
   id: number;
   name: string;
   price: number;
@@ -466,10 +466,10 @@ interface Product {
   rating: number;
   reviews: number;
   discount?: number | null;
-  trending: boolean;
-  popular: boolean;
-  isNew: boolean;
-}
+  trending?: boolean;
+  popular?: boolean;
+  isNew?: boolean;
+};
 
 function ProductCard({ product }: { product: Product }) {
   return (
@@ -492,7 +492,7 @@ function ProductCard({ product }: { product: Product }) {
         {product.isNew && <Badge className="absolute top-3 right-3 bg-blue-600 font-bold">NEW</Badge>}
 
         <div className="absolute bottom-0 left-0 right-0 flex justify-between p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <Button className="w-full bg-blue-600 hover:bg-blue-700 rounded-xl">Add to Cart</Button>
+          <Button className="w-full bg-orange-500 hover:bg-orange-600 rounded-xl">Add to Cart</Button>
         </div>
       </div>
 
@@ -644,7 +644,7 @@ const products = [
 const featuredLocations = [
   {
     id: 1,
-    name: "SuperMart Downtown",
+    name: "Xhangolli Downtown",
     address: "123 Main Street, Downtown, City 10001",
     hours: "8:00 AM - 10:00 PM",
     type: "Flagship Store",
@@ -652,7 +652,7 @@ const featuredLocations = [
   },
   {
     id: 2,
-    name: "SuperMart Westside",
+    name: "Xhangolli Westside",
     address: "456 West Avenue, Westside, City 10002",
     hours: "7:00 AM - 11:00 PM",
     type: "Superstore",
@@ -660,7 +660,7 @@ const featuredLocations = [
   },
   {
     id: 3,
-    name: "SuperMart Eastside",
+    name: "Xhangolli Eastside",
     address: "789 East Boulevard, Eastside, City 10003",
     hours: "8:00 AM - 9:00 PM",
     type: "Express Store",

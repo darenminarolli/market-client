@@ -21,7 +21,7 @@ export default function ProductsPage() {
 
       <main className="flex-1">
         {/* Hero Banner */}
-        <section className="relative py-12 bg-gradient-to-r from-blue-600 to-red-600 overflow-hidden">
+        <section className="relative py-12 bg-gradient-to-r from-orange-500 to-green-600 overflow-hidden">
           <div className="absolute inset-0 bg-[url('/placeholder.svg?height=500&width=1600')] opacity-10 mix-blend-overlay bg-fixed"></div>
           <div className="container mx-auto px-4 relative">
             <div className="max-w-3xl mx-auto text-center text-white">
@@ -35,7 +35,7 @@ export default function ProductsPage() {
                   className="pl-12 pr-4 py-6 rounded-full border-2 border-white/30 bg-white/10 placeholder:text-white/60 text-white focus:border-white focus:ring-white"
                 />
                 <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-white/70" />
-                <Button className="absolute right-2 top-1/2 transform -translate-y-1/2 rounded-full bg-white text-blue-600 hover:bg-gray-100">
+                <Button className="absolute right-2 top-1/2 transform -translate-y-1/2 rounded-full bg-white text-orange-500 hover:bg-gray-100">
                   Search
                 </Button>
               </div>
@@ -179,7 +179,7 @@ export default function ProductsPage() {
                     </AccordionItem>
                   </Accordion>
 
-                  <Button className="w-full mt-6 bg-blue-600 hover:bg-blue-700">Apply Filters</Button>
+                  <Button className="w-full mt-6 bg-orange-500 hover:bg-orange-600">Apply Filters</Button>
                 </div>
               </div>
 
@@ -236,7 +236,7 @@ export default function ProductsPage() {
                       <Button
                         key={page}
                         variant={page === 1 ? "default" : "outline"}
-                        className={`rounded-full w-10 h-10 ${page === 1 ? "bg-blue-600" : ""}`}
+                        className={`rounded-full w-10 h-10 ${page === 1 ? "bg-orange-500" : ""}`}
                       >
                         {page}
                       </Button>
@@ -271,7 +271,21 @@ export default function ProductsPage() {
 }
 
 // Product Card Component
-function ProductCard({ product }) {
+interface Product {
+  id: number;
+  name: string;
+  price: number;
+  oldPrice?: number | null;
+  image: string;
+  rating: number;
+  reviews: number;
+  discount?: number | null;
+  trending?: boolean;
+  popular?: boolean;
+  isNew?: boolean;
+}
+
+function ProductCard({ product }: { product: Product }) {
   return (
     <Card className="rounded-2xl overflow-hidden group border-0 shadow-md hover:shadow-xl transition-all duration-300">
       <div className="relative">
@@ -286,13 +300,13 @@ function ProductCard({ product }) {
         </div>
 
         {product.discount && (
-          <Badge className="absolute top-3 left-3 bg-red-600 font-bold">{product.discount}% OFF</Badge>
+          <Badge className="absolute top-3 left-3 bg-green-600 font-bold">{product.discount}% OFF</Badge>
         )}
 
-        {product.isNew && <Badge className="absolute top-3 right-3 bg-blue-600 font-bold">NEW</Badge>}
+        {product.isNew && <Badge className="absolute top-3 right-3 bg-orange-500 font-bold">NEW</Badge>}
 
         <div className="absolute bottom-0 left-0 right-0 flex justify-between p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          <Button className="w-full bg-blue-600 hover:bg-blue-700 rounded-xl">Add to Cart</Button>
+          <Button className="w-full bg-orange-500 hover:bg-orange-600 rounded-xl">Add to Cart</Button>
         </div>
       </div>
 

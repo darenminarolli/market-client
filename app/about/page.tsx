@@ -14,13 +14,13 @@ export default function AboutPage() {
 
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative py-20 bg-gradient-to-r from-blue-600 to-red-600 overflow-hidden">
+        <section className="relative py-20 bg-gradient-to-r from-orange-500 to-green-600 overflow-hidden">
           <div className="absolute inset-0 bg-[url('/placeholder.svg?height=900&width=1600')] opacity-20 mix-blend-overlay bg-fixed"></div>
           <div className="container mx-auto px-4 relative">
             <div className="max-w-3xl mx-auto text-center text-white">
-              <h1 className="text-4xl md:text-6xl font-bold mb-6">About SuperMart</h1>
+              <h1 className="text-4xl md:text-6xl font-bold mb-6">About Xhangolli</h1>
               <p className="text-xl text-white/90 mb-8">
-                We're on a mission to make grocery shopping easier, faster, and more enjoyable for everyone.
+                We&apos;re on a mission to make grocery shopping easier, faster, and more enjoyable for everyone.
               </p>
             </div>
           </div>
@@ -33,7 +33,7 @@ export default function AboutPage() {
               <div>
                 <h2 className="text-3xl font-bold mb-6">Our Story</h2>
                 <p className="text-gray-600 mb-6">
-                  SuperMart was founded in 2013 with a simple vision: to create a grocery shopping experience that puts
+                  Xhangolli was founded in 2013 with a simple vision: to create a grocery shopping experience that puts
                   customers first. What started as a small corner store has grown into a nationwide chain with over 50
                   locations.
                 </p>
@@ -42,23 +42,26 @@ export default function AboutPage() {
                   long lines, limited selection, and poor quality produce. She believed there had to be a better way.
                 </p>
                 <p className="text-gray-600 mb-6">
-                  Today, SuperMart is known for its exceptional customer service, wide selection of high-quality
+                  Today, Xhangolli is known for its exceptional customer service, wide selection of high-quality
                   products, and commitment to supporting local farmers and suppliers. We continue to innovate and
-                  improve, always keeping our customers' needs at the heart of everything we do.
+                  improve, always keeping our customers&apos; needs at the heart of everything we do.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 mt-8">
-                  <Button className="bg-blue-600 hover:bg-blue-700 rounded-full">
+                  <Button className="bg-orange-500 hover:bg-orange-600 rounded-full">
                     Our Locations
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
-                  <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 rounded-full">
+                  <Button
+                    variant="outline"
+                    className="border-orange-500 text-orange-500 hover:bg-orange-50 rounded-full"
+                  >
                     Join Our Team
                   </Button>
                 </div>
               </div>
               <div>
                 <div className="relative">
-                  <div className="absolute -inset-4 rounded-full bg-blue-100 blur-xl opacity-70"></div>
+                  <div className="absolute -inset-4 rounded-full bg-orange-100 blur-xl opacity-70"></div>
                   <Image
                     src="/placeholder.svg?height=600&width=800&text=Our+Story"
                     alt="Our story"
@@ -103,27 +106,27 @@ export default function AboutPage() {
                 <div className="space-y-4">
                   {[
                     {
-                      icon: <CheckCircle className="h-5 w-5 text-blue-600" />,
+                      icon: <CheckCircle className="h-5 w-5 text-orange-500" />,
                       value: "Quality",
                       desc: "We never compromise on the quality of our products",
                     },
                     {
-                      icon: <Users className="h-5 w-5 text-blue-600" />,
+                      icon: <Users className="h-5 w-5 text-orange-500" />,
                       value: "Community",
                       desc: "We support local communities and build lasting relationships",
                     },
                     {
-                      icon: <Award className="h-5 w-5 text-blue-600" />,
+                      icon: <Award className="h-5 w-5 text-orange-500" />,
                       value: "Excellence",
                       desc: "We strive for excellence in everything we do",
                     },
                     {
-                      icon: <Leaf className="h-5 w-5 text-blue-600" />,
+                      icon: <Leaf className="h-5 w-5 text-green-600" />,
                       value: "Sustainability",
                       desc: "We're committed to environmentally responsible practices",
                     },
                     {
-                      icon: <Heart className="h-5 w-5 text-blue-600" />,
+                      icon: <Heart className="h-5 w-5 text-green-600" />,
                       value: "Care",
                       desc: "We care deeply about our customers, employees, and partners",
                     },
@@ -147,7 +150,7 @@ export default function AboutPage() {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-3">Meet Our Leadership Team</h2>
-              <p className="text-gray-600 max-w-xl mx-auto">The passionate individuals behind SuperMart's success</p>
+              <p className="text-gray-600 max-w-xl mx-auto">The passionate individuals behind Xhangolli&apos;s success</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -205,7 +208,7 @@ export default function AboutPage() {
             </div>
 
             <div className="mt-12 text-center">
-              <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-50 rounded-full">
+              <Button variant="outline" className="border-orange-500 text-orange-500 hover:bg-orange-50 rounded-full">
                 View Full Team
               </Button>
             </div>
@@ -218,7 +221,7 @@ export default function AboutPage() {
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold mb-3">What Our Customers Say</h2>
               <p className="text-gray-600 max-w-xl mx-auto">
-                Don't just take our word for it - hear from our satisfied customers
+                Don&apos;t just take our word for it - hear from our satisfied customers
               </p>
             </div>
 
@@ -226,14 +229,14 @@ export default function AboutPage() {
               {[
                 {
                   quote:
-                    "SuperMart has completely changed how I shop for groceries. The quality is outstanding and the delivery is always on time!",
+                    "Xhangolli has completely changed how I shop for groceries. The quality is outstanding and the delivery is always on time!",
                   name: "Emily R.",
                   location: "New York, NY",
                   image: "/placeholder.svg?height=100&width=100&text=Emily",
                 },
                 {
                   quote:
-                    "I love the selection of organic produce. Everything is always fresh and the prices are reasonable. SuperMart is my go-to grocery store!",
+                    "I love the selection of organic produce. Everything is always fresh and the prices are reasonable. Xhangolli is my go-to grocery store!",
                   name: "Marcus T.",
                   location: "Chicago, IL",
                   image: "/placeholder.svg?height=100&width=100&text=Marcus",
@@ -262,7 +265,7 @@ export default function AboutPage() {
                       <p className="text-sm text-gray-500">{testimonial.location}</p>
                     </div>
                   </div>
-                  <p className="text-gray-600 italic">"{testimonial.quote}"</p>
+                  <p className="text-gray-600 italic">&quot;{testimonial.quote}&quot;</p>
                   <div className="mt-4 flex">
                     {Array(5)
                       .fill(0)
@@ -279,17 +282,17 @@ export default function AboutPage() {
         </section>
 
         {/* Join Us CTA */}
-        <section className="py-16 bg-gradient-to-r from-blue-600 to-red-600 relative overflow-hidden">
+        <section className="py-16 bg-gradient-to-r from-orange-500 to-green-600 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('/placeholder.svg?height=500&width=1920')] opacity-10 mix-blend-overlay"></div>
           <div className="container mx-auto px-4 relative">
             <div className="max-w-3xl mx-auto text-center text-white">
-              <h2 className="text-3xl font-bold mb-6">Join the SuperMart Family</h2>
+              <h2 className="text-3xl font-bold mb-6">Join the Xhangolli Family</h2>
               <p className="text-xl mb-8">
-                Whether you're a customer, supplier, or looking for career opportunities, we'd love to have you join our
+                Whether you&apos;re a customer, supplier, or looking for career opportunities, we&apos;d love to have you join our
                 growing community.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 rounded-full">
+                <Button size="lg" className="bg-white text-orange-500 hover:bg-gray-100 rounded-full">
                   Find a Store Near You
                 </Button>
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10 rounded-full">

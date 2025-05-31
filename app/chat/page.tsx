@@ -5,7 +5,7 @@ const page = () => {
   return (
     <div>
         <div className='justify-center items-top flex h-screen mt-10'>
-            <h1 className='text-2xl font-extrabold '>Kjo eshte vetem demo Lokalisht. Funksionalitet e chatbot nuk gjenden ne website demo q te derguar!!!</h1>
+            <h1 className='text-2xl font-extrabold '>Kjo eshte vetem demo Lokalisht.</h1>
         </div>
         <ChatbotButton/>
     </div>

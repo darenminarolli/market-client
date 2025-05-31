@@ -58,7 +58,7 @@ export default function ChatbotButton() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      content: "👋 Ckemi! Unë jam Asistenti virtual i supermaketit Spar. Si mund t'ju ndihmoj sot?",
+      content: "👋 Ckemi! Unë jam Asistenti virtual i ECO Market. Si mund t'ju ndihmoj sot?",
       sender: "bot",
       type: "text",
     },
@@ -167,7 +167,7 @@ export default function ChatbotButton() {
                   </div>
                 </Avatar>
                 <div>
-                  <h3 className="font-medium text-white">Spar Assistant</h3>
+                  <h3 className="font-medium text-white">ECO&apos;s Assistant</h3>
                   <p className="text-xs text-white/80">Online | Usually replies instantly</p>
                 </div>
               </div>
@@ -232,7 +232,7 @@ export default function ChatbotButton() {
                 </div>
                 <div className="flex items-center justify-center mt-2 text-xs text-emerald-700">
                   <Leaf className="h-3 w-3 mr-1" />
-                  <span>Powered by Spar Fresh Technology</span>
+                  <span>Powered by ECO Market Fresh Technology</span>
                 </div>
               </form>
             </div>
