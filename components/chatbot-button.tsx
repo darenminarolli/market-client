@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Avatar } from "@/components/ui/avatar"
 
-type StructuredContent = {
+type StructuredContent = { 
   title: string
   sections: {
     heading: string
