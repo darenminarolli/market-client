@@ -58,7 +58,7 @@ export default function ChatbotButton() {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      content: "👋 Ckemi! Unë jam Asistenti virtual i Pronatyra Market. Si mund t'ju ndihmoj sot?",
+      content: "👋 Ckemi! Unë jam Asistenti virtual i ECO Market. Si mund t'ju ndihmoj sot?",
       sender: "bot",
       type: "text",
     },
@@ -107,7 +107,7 @@ export default function ChatbotButton() {
     setIsTyping(true)
 
     try {
-      const response = await fetch("http://localhost:5001/chat", {
+      const response = await fetch("http://localhost:5000/chat", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -156,18 +156,18 @@ export default function ChatbotButton() {
         {isChatOpen && (
           <div className="relative w-full max-w-[370px] h-[500px] bg-white rounded-2xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden">
             {/* Chat header - Updated with red and green design */}
-            <div className="bg-green-600 p-4 flex justify-between items-center relative overflow-hidden">
+            <div className="bg-red-700 p-4 flex justify-between items-center relative overflow-hidden">
               {/* Green decorative element */}
-              <div className="absolute top-0 right-0 w-24 h-24 bg-amber-400 rounded-bl-full opacity-90"></div>
+              <div className="absolute top-0 right-0 w-24 h-24 bg-emerald-600 rounded-bl-full opacity-90"></div>
 
               <div className="flex items-center space-x-3 z-10">
-                {/* <Avatar className="h-10 w-10 border-2 border-white">
-                  <div className="h-full w-full bg-yellow-200 flex items-center justify-center text-white font-bold">
-                    P
+                <Avatar className="h-10 w-10 border-2 border-white">
+                  <div className="h-full w-full bg-red-800 flex items-center justify-center text-white font-bold">
+                    S
                   </div>
-                </Avatar> */}
+                </Avatar>
                 <div>
-                  <h3 className="font-medium text-white">Pronatyra&apos;s Assistant</h3>
+                  <h3 className="font-medium text-white">ECO&apos;s Assistant</h3>
                   <p className="text-xs text-white/80">Online | Usually replies instantly</p>
                 </div>
               </div>
@@ -183,7 +183,7 @@ export default function ChatbotButton() {
                   <div
                     className={`max-w-[80%] rounded-2xl p-3 ${
                       message.sender === "user"
-                        ? "bg-green-600 text-white rounded-tr-none"
+                        ? "bg-red-700 text-white rounded-tr-none"
                         : "bg-emerald-100 text-gray-800 rounded-tl-none border-l-4 border-emerald-600"
                     }`}
                   >
@@ -232,7 +232,7 @@ export default function ChatbotButton() {
                 </div>
                 <div className="flex items-center justify-center mt-2 text-xs text-emerald-700">
                   <Leaf className="h-3 w-3 mr-1" />
-                  <span>Powered by Pronatyra Market Fresh Technology</span>
+                  <span>Powered by ECO Market Fresh Technology</span>
                 </div>
               </form>
             </div>
@@ -255,10 +255,10 @@ export default function ChatbotButton() {
           onClick={toggleChat}
           size="icon"
           className={`h-14 w-14 rounded-full relative overflow-hidden ${
-            isChatOpen ? "bg-gray-700 hover:bg-gray-800" : "bg-green-600 hover:bg-red-800"
+            isChatOpen ? "bg-gray-700 hover:bg-gray-800" : "bg-red-700 hover:bg-red-800"
           } shadow-lg hover:shadow-xl transition-all duration-300`}
         >
-          {!isChatOpen && <div className="absolute top-0 right-0 w-7 h-7 bg-amber-400 rounded-bl-full"></div>}
+          {!isChatOpen && <div className="absolute top-0 right-0 w-7 h-7 bg-emerald-600 rounded-bl-full"></div>}
           <div className="relative z-10">
             {isChatOpen ? <X className="h-6 w-6 text-white" /> : <MessageSquare className="h-6 w-6 text-white" />}
           </div>
