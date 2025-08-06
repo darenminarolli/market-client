@@ -6,7 +6,6 @@ import { useState, useRef, useEffect, type FormEvent, type ChangeEvent } from "r
 import { MessageSquare, Send, X, ArrowDown, Leaf } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
-import { Avatar } from "@/components/ui/avatar"
 
 type StructuredContent = { 
   title: string
@@ -23,7 +22,7 @@ type StructuredContent = {
 
 type Message = {
   id: number
-  content: any // using any as requested
+  content: any
   sender: "user" | "bot"
   type: "structured" | "text"
 }
