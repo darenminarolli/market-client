@@ -18,9 +18,9 @@ export default function Home() {
       <Header />
 
       <main className="flex-1">
-        {/* Hero Section - Completely Redesigned */}
+
         <section className="relative bg-white overflow-hidden">
-          {/* Background gradient */}
+
           <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-green-50"></div>
 
           <div className="container mx-auto px-4 relative">
