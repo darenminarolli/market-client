@@ -18,14 +18,11 @@ export default function Home() {
       <Header />
 
       <main className="flex-1">
-        {/* Hero Section - Completely Redesigned */}
         <section className="relative bg-white overflow-hidden">
-          {/* Background gradient */}
           <div className="absolute inset-0 bg-gradient-to-br from-orange-50 via-white to-green-50"></div>
 
           <div className="container mx-auto px-4 relative">
             <div className="grid md:grid-cols-2 gap-8 items-center py-16 md:py-24">
-              {/* Left content */}
               <div className="order-2 md:order-1 z-10">
                 <div className="inline-block mb-4">
                   <Badge className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-medium">
@@ -78,11 +75,8 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-
-              {/* Right content - Product showcase */}
               <div className="order-1 md:order-2 relative">
                 <div className="relative">
-                  {/* Main product image */}
                   <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl transform transition-transform hover:scale-[1.02] duration-500">
                     <Image
                       src="/placeholder.svg?height=600&width=800&text=Fresh+Groceries"
@@ -91,14 +85,10 @@ export default function Home() {
                       height={600}
                       className="w-full h-auto"
                     />
-
-                    {/* Discount tag */}
                     <div className="absolute top-6 right-6 bg-red-600 text-white rounded-full h-16 w-16 flex items-center justify-center font-bold text-lg shadow-lg">
                       30% OFF
                     </div>
                   </div>
-
-                  {/* Floating product cards */}
                   <div className="absolute -bottom-6 -left-6 z-20 w-32 md:w-40 bg-white rounded-xl shadow-lg p-2 transform transition-transform hover:scale-105 duration-300">
                     <div className="relative rounded-lg overflow-hidden mb-2">
                       <Image
