@@ -13,7 +13,7 @@ export default function AboutPage() {
       <Header />
 
       <main className="flex-1">
-        {/* Hero Section */}
+
         <section className="relative py-20 bg-gradient-to-r from-orange-500 to-green-600 overflow-hidden">
           <div className="absolute inset-0 bg-[url('/placeholder.svg?height=900&width=1600')] opacity-20 mix-blend-overlay bg-fixed"></div>
           <div className="container mx-auto px-4 relative">
@@ -26,7 +26,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Our Story */}
         <section className="py-16 bg-white">
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center">
