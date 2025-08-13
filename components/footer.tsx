@@ -97,7 +97,6 @@ export default function Footer() {
             </address>
           </div>
         </div>
-
         <div className="border-t border-gray-800 mt-12 pt-6 text-center text-gray-500">
           <p>&copy; {new Date().getFullYear()} AlbMarket. All rights reserved.</p>
         </div>
