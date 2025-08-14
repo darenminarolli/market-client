@@ -5,7 +5,7 @@ const page = () => {
   return (
     <div>
         <div className='justify-center items-top flex h-screen mt-10'>
-            <h1 className='text-2xl font-extrabold '>Kjo eshte vetem demo Lokalisht.</h1>
+            <h2 className='text-2xl font-extrabold '>Kjo eshte vetem demo Lokalisht.</h2>
         </div>
         <ChatbotButton/>
     </div>
